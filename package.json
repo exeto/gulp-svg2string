@@ -19,7 +19,7 @@
     "sprite"
   ],
   "dependencies": {
-    "gulp-util": "^3.0.4",
-    "through2": "^0.6.5"
+    "gulp-util": "^3.0.7",
+    "through2": "^2.0.0"
   }
 }
