@@ -1,6 +1,6 @@
 {
   "name": "gulp-svg2string",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Convert SVG file to JavaScript string",
   "license": "MIT",
   "repository": "exeto/gulp-svg2string",
