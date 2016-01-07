@@ -17,7 +17,7 @@ var svg2string = require('gulp-svg2string');
 
 gulp.task('default', function () {
   return gulp.src('src/**/*.svg')
-    .pipe(svgstore())
+    .pipe(svgstore({ inlineSvg: true }))
     .pipe(svg2string())
     .pipe(gulp.dest('dest'));
 });
