@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.0] - 2017-06-21
+### Added
+- Add `variableName` option
+
 ## [0.1.1] - 2015-12-30
 ### Updated
 - Update dependencies.
