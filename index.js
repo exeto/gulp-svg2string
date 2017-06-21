@@ -4,7 +4,9 @@ var path    = require('path');
 var gutil   = require('gulp-util');
 var through = require('through2');
 
-module.exports = function () {
+module.exports = function (options) {
+  var opts = options || {variableName: 'SVG_SPRITE'};
+
   return through.obj(function (file, enc, cb) {
     var re;
     var newFile;
@@ -25,7 +27,7 @@ module.exports = function () {
 
       newFile = file.contents.toString().replace(/'/g, "\\'");
       newFile = newFile.replace(/>\s+</g, '><').trim();
-      newFile = "window.SVG_SPRITE = '" + newFile + "';";
+      newFile = "window." + opts.variableName + " = '" + newFile + "';";
 
       file.contents = new Buffer(newFile);
       this.push(file);

@@ -46,6 +46,22 @@ gulp.task('default', function () {
 </html>
 ```
 
+## Options
+The ```variableName``` specifies the name of the sprite variable.
+
+```js
+svg2string({
+    variableName: 'MY_SVG_SPRITE'
+})
+```
+
+```html
+<script>
+  document.querySelector('.svg-placeholder').innerHTML = MY_SVG_SPRITE;
+</script>
+```
+
+
 ## License
 
 [MIT](LICENSE.md) © [Timofey Dergachev](http://exeto.me/)
