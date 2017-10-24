@@ -27,6 +27,8 @@ module.exports = function (options) {
 
       newFile = file.contents.toString().replace(/'/g, "\\'");
       newFile = newFile.replace(/>\s+</g, '><').trim();
+      newFile = newFile.replace(/\r\n/g, ' ');
+      newFile = newFile.replace(/\t/g, '');
       newFile = "window." + opts.variableName + " = '" + newFile + "';";
 
       file.contents = new Buffer(newFile);
