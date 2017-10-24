@@ -1,20 +1,15 @@
-# Change Log
-All notable changes to this project will be documented in this file.
-This project adheres to [Semantic Versioning](http://semver.org/).
+0.3.0 / 2017-10-24
+==================
+- Remove `\r\n` and `\t` from result string
 
-## [Unreleased]
-
-## [0.2.0] - 2017-06-21
-### Added
+0.2.0 / 2017-06-21
+==================
 - Add `variableName` option
 
-## [0.1.1] - 2015-12-30
-### Updated
-- Update dependencies.
+0.1.1 / 2015-12-30
+==================
+- Update dependencies
 
-## 0.1.0 - 2015-12-30
-### Added
-- Initial commit.
-
-[Unreleased]: https://github.com/exeto/gulp-svg2string/compare/v0.1.1...HEAD
-[0.1.1]: https://github.com/exeto/gulp-svg2string/compare/v0.1.0...v0.1.1
+0.1.0 / 2015-12-30
+==================
+- Initial commit
