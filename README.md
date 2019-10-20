@@ -2,6 +2,8 @@
 
 > Convert SVG file to JavaScript string.
 
+**THIS PACKAGE IS NO LONGER MAINTAINED**
+
 ## Install
 
 ```
@@ -15,25 +17,29 @@ var gulp = require('gulp');
 var svgstore = require('gulp-svgstore');
 var svg2string = require('gulp-svg2string');
 
-gulp.task('default', function () {
-  return gulp.src('src/**/*.svg')
+gulp.task('default', function() {
+  return gulp
+    .src('src/**/*.svg')
     .pipe(svgstore({ inlineSvg: true }))
     .pipe(svg2string())
     .pipe(gulp.dest('dest'));
 });
 ```
+
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <script src="sprite.js"></script>
   </head>
   <body>
     <!-- SVG sprite include -->
-    <div class="svg-placeholder"
+    <div
+      class="svg-placeholder"
       style="border: 0; clip: rect(0 0 0 0); height: 1px;
         margin: -1px; overflow: hidden; padding: 0;
-        position: absolute; width: 1px;"></div>
+        position: absolute; width: 1px;"
+    ></div>
     <script>
       document.querySelector('.svg-placeholder').innerHTML = SVG_SPRITE;
     </script>
@@ -47,12 +53,13 @@ gulp.task('default', function () {
 ```
 
 ## Options
-The ```variableName``` specifies the name of the sprite variable.
+
+The `variableName` specifies the name of the sprite variable.
 
 ```js
 svg2string({
-    variableName: 'MY_SVG_SPRITE'
-})
+  variableName: 'MY_SVG_SPRITE',
+});
 ```
 
 ```html
@@ -60,7 +67,6 @@ svg2string({
   document.querySelector('.svg-placeholder').innerHTML = MY_SVG_SPRITE;
 </script>
 ```
-
 
 ## License
 
